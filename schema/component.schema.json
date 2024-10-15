@@ -1,0 +1,96 @@
+{
+  "$anchor": "spinItems-component",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "$merge": {
+    "source": {
+      "$ref": "component"
+    },
+    "with": {
+      "properties": {
+        "_supportedLayout": {
+          "type": "string",
+          "title": "Supported layout",
+          "default": "both",
+          "enum": ["full-width", "half-width", "both"],
+          "_adapt": {
+            "editorOnly": true
+          }
+        },
+        "instruction": {
+          "type": "string",
+          "title": "Instruction",
+          "default": "",
+          "_adapt": {
+            "translatable": true
+          }
+        },
+        "_percentInviewVertical": {
+          "type": "number",
+          "title": "Percent in view vertical",
+          "default": 20,
+          "_adapt": {
+            "editorOnly": true
+          }
+        },
+        "_useTitle": {
+          "type": "boolean",
+          "title": "Use title",
+          "default": true,
+          "_adapt": {
+            "editorOnly": true
+          }
+        },
+        "_spinLabel": {
+          "type": "string",
+          "title": "Spin label",
+          "default": "Spin",
+          "_adapt": {
+            "editorOnly": true
+          }
+        },
+        "_items": {
+          "type": "array",
+          "title": "Items",
+          "items": {
+            "type": "object",
+            "properties": {
+              "title": {
+                "type": "string",
+                "title": "Title",
+                "default": "Item 1",
+                "_adapt": {
+                  "translatable": true
+                }
+              },
+              "body": {
+                "type": "string",
+                "title": "Body",
+                "default": "",
+                "_adapt": {
+                  "translatable": true
+                }
+              },
+              "_graphic": {
+                "type": "object",
+                "title": "Graphic",
+                "properties": {
+                  "src": {
+                    "type": "string",
+                    "title": "Src",
+                    "default": ""
+                  },
+                  "alt": {
+                    "type": "string",
+                    "title": "Alt",
+                    "default": ""
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

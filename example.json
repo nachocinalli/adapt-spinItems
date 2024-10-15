@@ -1,0 +1,68 @@
+{
+  "_id": "c-05",
+  "_parentId": "b-05",
+  "_type": "component",
+  "_component": "spinItems",
+  "_classes": "",
+  "_layout": "full",
+  "title": "Spin items",
+  "displayTitle": "Spin items",
+  "body": "",
+  "instruction": "",
+  "_percentInviewVertical": 70,
+  "_useTitle": true,
+  "_spinLabel": "Spin",
+  "_items": [
+    {
+      "title": "Item 1",
+      "body": "This is optional body text.",
+      "_graphic": {
+        "src": "course/en/images/c-10.png",
+        "alt": ""
+      }
+    },
+    {
+      "title": "Item 2",
+      "body": "This is optional body text.",
+      "_graphic": {
+        "src": "course/en/images/c-15.png",
+        "alt": ""
+      }
+    },
+    {
+      "title": "Item 3",
+      "body": "This is optional body text.",
+      "_graphic": {
+        "src": "course/en/images/c-05.png",
+        "alt": ""
+      }
+    },
+    {
+      "title": "Item 4",
+      "body": "This is optional body text.",
+      "_graphic": {
+        "src": "course/en/images/c-10.png",
+        "alt": ""
+      }
+    },
+    {
+      "title": "Item 5",
+      "body": "This is optional body text.",
+      "_graphic": {
+        "src": "course/en/images/c-15.png",
+        "alt": ""
+      }
+    },
+    {
+      "title": "Item 6",
+      "body": "This is optional body text.",
+      "_graphic": {
+        "src": "course/en/images/c-05.png",
+        "alt": ""
+      }
+    }
+  ],
+  "_pageLevelProgress": {
+    "_isEnabled": true
+  }
+}

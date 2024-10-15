@@ -1,0 +1,122 @@
+{
+    "type": "object",
+    "$schema": "http://json-schema.org/draft-04/schema",
+    "id": "http://jsonschema.net",
+    "$ref": "http://localhost/plugins/content/component/model.schema",
+    "globals": {
+        "ariaRegion": {
+            "type": "string",
+            "required": true,
+            "default": "",
+            "inputType": "Text",
+            "validators": [],
+            "translatable": true
+        }
+    },
+    "properties": {
+        "_supportedLayout": {
+            "type": "string",
+            "required": true,
+            "enum": [
+                "full-width",
+                "half-width",
+                "both"
+            ],
+            "default": "both",
+            "editorOnly": true
+        },
+        "instruction": {
+            "type": "string",
+            "required": false,
+            "default": "",
+            "inputType": "Text",
+            "validators": [],
+            "help": "This is the instruction text",
+            "translatable": true
+        },
+        "_percentInviewVertical": {
+            "type": "number",
+            "required": false,
+            "default": 20,
+            "isSetting": true,
+            "title": "Percent in view",
+            "inputType": "Number",
+            "validators": [
+                "number"
+            ],
+            "help": "The percentage of the component that must be in view before it is considered to be in view. This is a number between 0 and 100. The default is 20."
+        },
+        "_useTitle": {
+            "type": "boolean",
+            "required": false,
+            "default": false,
+            "isSetting": true,
+            "title": "Use title",
+            "inputType": "Checkbox",
+            "validators": [],
+            "help": "If checked, the title will be used."
+        },
+        "_spinLabel": {
+            "type": "string",
+            "required": false,
+            "default": "",
+            "isSetting": true,
+            "title": "Spin label",
+            "inputType": "Text",
+            "validators": [],
+            "help": "The label for the spinner."
+        },
+        "_items": {
+            "type": "array",
+            "required": true,
+            "title": "Items",
+            "items": {
+                "type": "object",
+                "required": true,
+                "properties": {
+                    "title": {
+                        "type": "string",
+                        "required": true,
+                        "default": "",
+                        "inputType": "Text",
+                        "validators": [],
+                        "translatable": true
+                    },
+                    "body": {
+                        "type": "string",
+                        "required": true,
+                        "default": "",
+                        "inputType": "TextArea",
+                        "validators": [],
+                        "translatable": true
+                    },
+                    "_graphic": {
+                        "type": "object",
+                        "required": false,
+                        "title": "Graphic",
+                        "properties": {
+                            "src": {
+                                "type": "string",
+                                "required": false,
+                                "default": "",
+                                "inputType": "Asset:image",
+                                "validators": [],
+                                "help": "Image which will be rendered with the item"
+                            },
+                            "alt": {
+                                "type": "string",
+                                "required": false,
+                                "default": "",
+                                "title": "Alternative text",
+                                "inputType": "Text",
+                                "validators": [],
+                                "help": "A description of the image",
+                                "translatable": true
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
