@@ -1,6 +1,6 @@
 import ItemsComponentModel from 'core/js/models/itemsComponentModel';
 
-export default class TextModel extends ItemsComponentModel {
+export default class SpinModel extends ItemsComponentModel {
   spin() {
     const activeItem = this.getActiveItem();
 
