@@ -78,11 +78,14 @@
     cursor: pointer;
   }
 
+  .wheel.spinning-clockwise {
+    transition: transform var(--spinning-duration);
+    transform: rotate(calc(var(--nb-turn) * 360deg + (360deg * calc(var(--nb-item) - var(--selected-item)) / var(--nb-item, 1))))
+  }
   .wheel.spinning {
     transition: transform var(--spinning-duration);
     transform: rotate(calc(var(--nb-turn) * 360deg + (-360deg * var(--selected-item) / var(--nb-item, 1))));
   }
-
   .wheel__spin-button {
     display: block;
     position: absolute;
