@@ -1,17 +1,14 @@
 {
   "name": "adapt-spinItems",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "framework": ">=5.19.1",
   "homepage": "https://github.com/nachocinalli/adapt-spinItems",
   "bugs": "https://github.com/nachocinalli/adapt-spinItems/issues",
-  "component" : "spinItems",
+  "component": "spinItems",
   "targetAttribute": "_spinItems",
-  "displayName" : "Spin Items",
+  "displayName": "Spin Items",
   "description": "",
   "main": "/js/adapt-spinItems.js",
-  "keywords": [
-    "adapt-plugin",
-    "adapt-component"
-  ],
+  "keywords": ["adapt-plugin", "adapt-component"],
   "license": "GPL-3.0"
 }
