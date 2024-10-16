@@ -19,7 +19,7 @@ class SpinItemsView extends ComponentView {
     $(currentTarget).off('onscreen.animate');
     const activeItem = this.model.getActiveItem();
     if (!activeItem) {
-      const firstItem = this.model.getItem(0);
+      const firstItem = this.model.get('_clockwise') ? this.model.getItem(this.model.get('_items').length - 1) : this.model.getItem(0);
       firstItem.set({ _isActive: true, _isVisited: true });
     }
   }
