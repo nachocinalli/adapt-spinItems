@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { compile, templates } from 'core/js/reactHelpers';
 export default function SpinItems(props) {
-  const { _items, _isInview, _useTitle, _spinLabel, onSpin } = props;
+  const { _items, _isInview, _useTitle, _spinLabel, _clockwise, onSpin } = props;
   const [selectedItem, setSelectedItem] = useState(null);
 
   const [spinning, setSpinning] = useState('');
@@ -13,7 +13,7 @@ export default function SpinItems(props) {
 
     setTimeout(() => {
       const activeItem = _items.find((item) => item._isActive);
-      setSpinning(activeItem !== null ? 'spinning' : '');
+      setSpinning(activeItem !== null ? (_clockwise ? 'spinning' : 'spinning-clockwise') : '');
       setSelectedItem(activeItem);
     }, 500);
     setTimeout(() => {
@@ -22,7 +22,7 @@ export default function SpinItems(props) {
     return () => {
       setSpinEnd(false);
     };
-  }, [_items, _isInview]);
+  }, [_items, _isInview, _clockwise]);
   return (
     <div className='component__inner spinitems__inner'>
       <templates.header {...props} />
